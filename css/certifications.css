@@ -1,0 +1,80 @@
+/* -----------------------------------------
+   CERTIFICATIONS SECTION
+----------------------------------------- */
+.certifications-section {
+  padding: 60px 0;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cert-card {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cert-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.15);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cert-card .card-body {
+  padding: 16px;
+}
+
+.cert-card .card-body h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.cert-card .card-body p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* PDF View Button */
+.cert-card .btn-cv {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cert-card .btn-cv:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(13,110,253,0.3);
+}
+
+@media (max-width: 720px) {
+  .cert-card img {
+    height: 140px;
+  }
+}
